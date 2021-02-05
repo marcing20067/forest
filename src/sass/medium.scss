@@ -1,0 +1,43 @@
+.wrapper-bigger {
+    width: 80%;
+    max-width: 1600px;
+}
+
+.wrapper-smaller {
+    width: 65%;
+    max-width: 1200px;
+}
+
+.title {
+    font-size: 2.4em;
+}
+
+.header {
+    height: 400px;
+
+    &__title {
+        font-size: 2.4em;
+    }
+
+    span {
+        font-size: 0.8em;
+    }
+}
+
+.about-us {
+    &__box-heading {
+        font-size: 3rem;
+    }
+}
+
+.bar {
+    &__text {
+        font-size: 4rem;
+        padding: 1em 0 1em 0;
+        width: 100%;
+        text-align: center;
+
+    }
+}
+
+@import 'footer/footer-medium'

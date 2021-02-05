@@ -1,0 +1,13 @@
+.footer {
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+}

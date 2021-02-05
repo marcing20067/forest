@@ -1,0 +1,28 @@
+@import 'reset', 'components', 'nav/nav';
+
+
+@import 'footer/footer';
+
+@media (min-width: 768px) {
+    @import 'footer/footer-medium';
+
+    .wrapper-bigger {
+        width: 80%;
+        max-width: 1600px;
+    }
+
+    .wrapper-smaller {
+        width: 65%;
+        max-width: 1200px;
+    }
+
+    .title {
+        font-size: 2.4em ;
+    }
+}
+
+@media (min-width: 1024px) {
+    @import 'nav/nav-desktop';
+
+    @import 'footer/footer-desktop';
+}

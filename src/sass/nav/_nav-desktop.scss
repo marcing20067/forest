@@ -1,0 +1,50 @@
+.nav {
+    height: auto;
+    background-color: #fff;
+    border-bottom: 1px solid gray;
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__heading {
+        font-size: 4.5rem;
+        display: block;
+
+        img {
+            height: 4.5rem;
+        }
+    }
+
+    &__list {
+        width: auto;
+        height: auto;
+        position: static;
+        flex-direction: row;
+        transition: none;
+        z-index: 100;
+
+        &-item {
+            height: auto;
+            text-align: center;
+
+            &-link {
+                display: block;
+                width: 12rem;
+                padding: 3.5rem 0;
+                transition: .2s color, .2s background-color;
+            }
+
+            &-link:hover {
+                color: white;
+                background-color: black;
+            }
+        }
+    }
+}
+
+.container {
+    display: none;
+}

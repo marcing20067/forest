@@ -1,0 +1,53 @@
+.footer {
+    background-color: #f4f4f4;
+
+    &__heading {
+        text-align: center;
+        font-size: 4.5rem;
+        display: block;
+        margin-bottom: 0.75em;
+
+        img {
+            height: 4.5rem;
+        }
+    }
+
+    &__box {
+
+        &-text {
+            color: #000;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 0.6em;
+        }
+
+        &-list {
+            list-style: none;
+            line-height: 125%;
+
+
+            &-item {
+                margin-bottom: 1em;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                &-link {
+                    text-decoration: none;
+                    color: rgba(000, 000, 000, .8);
+                    font-size: 0.8em;
+                }
+            }
+
+
+        }
+    }
+
+    &__end {
+        width: 100%;
+        text-align: center;
+        padding: 1.5em 0.5rem;
+        border-top: 1px solid solid;
+    }
+}
