@@ -1,13 +1,8 @@
 RewriteEngine on
-
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
-
 RewriteCond %{ENV:HTTPS} !on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-
-RewriteRule ^offers\.html$ https://vibrant-ardinghelli-571009.netlify.app/offers [L,R=301]
-
 RewriteRule ^index\.html$ / [NC,R,L]
 
 ErrorDocument 404 /404.html 
