@@ -3,7 +3,7 @@
 
     &__heading {
         display: block;
-        margin-bottom: 0.75em;
+        margin-bottom: 1.5rem;
         font-size: 4.5rem;
         text-align: center;
 
@@ -16,9 +16,9 @@
 
 
         &-text {
-            margin-bottom: 0.6em;
+            margin-bottom: 1.2rem;
             color: #000;
-            font-size: 1.1em;
+            font-size: 2.2rem;
             font-weight: bold;
         }
 
@@ -35,7 +35,7 @@
                 }
 
                 &-link {
-                    font-size: 0.8em;
+                    font-size: 1.6rem;
                     color: rgba(000, 000, 000, .8);
                     text-decoration: none;
                 }
@@ -50,7 +50,7 @@
     }
 
     &__end {
-        padding: 1.5em 0.5rem;
+        padding: 3rem 0.5rem;
         width: 100%;
         text-align: center;
         border-top: 1px solid solid;
