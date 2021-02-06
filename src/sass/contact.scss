@@ -129,12 +129,6 @@
 
 @media (min-width: 768px) {
     @import 'footer/footer-medium';
-
-    .nav {
-        &__box {
-            width: 100%;
-        }
-    }
 }
 
 @media (min-width: 1024px) {
