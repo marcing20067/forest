@@ -122,6 +122,8 @@
     }
 }
 
+
+
 @import 'footer/footer';
 
 @media (min-width: 768px) {
@@ -130,6 +132,12 @@
     .wrapper-bigger {
         width: 80%;
         max-width: 1600px;
+    }
+
+    .nav {
+        &__box {
+            width: 100%;
+        }
     }
 
     .wrapper-smaller {
