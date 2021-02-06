@@ -1,14 +1,13 @@
 @import './nav/nav-desktop';
 
 .about-us {
-
     &__box {
         margin-top: 0;
     }
 
     &__img {
-        width: 45%;
         margin-right: 4em;
+        width: 45%;
     }
 
     &__container {

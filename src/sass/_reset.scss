@@ -17,6 +17,8 @@ body {
     box-sizing: border-box;
 }
 
-.block-scroll {
-    overflow: hidden;
+@media (max-width: 1024px) {
+    .block-scroll {
+        overflow: hidden;
+    }
 }
