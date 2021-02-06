@@ -8,4 +8,6 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 RewriteRule ^index\.html$ / [NC,R,L]
 
+RewriteRule ^offers\.html$ https://vibrant-ardinghelli-571009.netlify.app/offers.html [L,R=301]
+
 ErrorDocument 404 /404.html 
