@@ -29,4 +29,15 @@
     }
 }
 
-@import 'footer/footer-medium'
+
+@import 'footer/footer-medium';
+
+@media(min-width: 900px) {
+    .offer {
+        &__box {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+}
