@@ -1,9 +1,33 @@
 @import 'reset', 'components', 'nav/nav';
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.funny-info {
+    min-height: 500px;
+    flex-grow: 1;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/redcat-mobile.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 @import 'footer/footer';
 
 @media (min-width: 768px) {
+    .funny-info {
+        min-height: 768px;
+        background-image: linear-gradient(45deg, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/redcat.jpg);
+    }
+
     @import 'footer/footer-medium';
 }
 
