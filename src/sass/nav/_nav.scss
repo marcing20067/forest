@@ -37,10 +37,17 @@
 
 
         &-item-link {
+            height: auto;
+            text-align: center;
             color: #000;
             text-decoration: none;
+            display: block;
+            padding: 3.5rem 0;
+            width: 12rem;
+            transition: .2s color, .2s background-color;
 
             &:hover {
+                color: white;
                 background-color: black;
             }
         }
