@@ -1,4 +1,4 @@
-@import 'reset', 'components', 'nav/nav';
+@import 'colors', 'reset', 'components', 'nav/nav';
 
 .map-frame {
     width: 100%;
@@ -16,18 +16,19 @@
 
     &__box {
         position: relative;
-        padding: 2rem 3rem 2rem;
         margin-bottom: 2rem;
         width: 100%;
         background-color: rgb(245, 245, 245);
 
         &:last-of-type {
             .form__box-label {
-                top: 4rem;
+                top: 2.9rem;
             }
         }
 
         &-input {
+            padding: 2rem 3rem 2rem;
+            width: 100%;
             background-color: transparent;
             color: rgba(0, 0, 0, .87);
             font-size: 1.6rem;
@@ -42,7 +43,7 @@
                 outline: none;
 
                 &~.form__box-label {
-                    color: #6200ee;
+                    color: $green;
                 }
 
                 &~.form__box-bar::after {
@@ -76,14 +77,13 @@
                 position: absolute;
                 height: 100%;
                 width: 100%;
-                background-color: #6200ee;
+                background-color: $darker-green;
                 opacity: 0;
                 transition: opacity .3s;
             }
         }
 
         &-textarea {
-            padding-top: 1.5rem;
             width: 100%;
             resize: vertical;
         }
@@ -99,26 +99,33 @@
         font-size: 1.6rem;
         text-transform: uppercase;
         font-weight: bold;
-        color: #FFF;
+        color: $white;
         border-radius: 5px;
+        background-color: $darker-green;
         border: none;
         cursor: pointer;
+        overflow: hidden;   
+
 
         &::after {
-            content: '';
+            content: "";
             position: absolute;
             z-index: -1;
             top: 0;
             left: 0;
-            width: 100%;
+            width: 110%;
             height: 100%;
-            background-color: #6200ee;
-            border-radius: 5px;
-            transition: .3s opacity;
+            border-radius: 10px;
+            transform: scaleX(0);
+            transform-origin: right;
+            background-color: rgba(0, 0, 0, .2);
+            transition: transform .3s;
+
         }
 
         &:hover::after {
-            opacity: 0.7;
+            transform: scaleX(1);
+            transform-origin: left;
         }
     }
 }

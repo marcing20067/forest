@@ -16,10 +16,50 @@
     margin-bottom: 4rem;
 }
 
+@mixin bar($url, $alfa){
+    .bar {
+        display: flex;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 400px;
+        background-image: linear-gradient(45deg, rgba(0, 0, 0, $alfa), rgba(0, 0, 0, $alfa)), url($url);
+        background-position: center center;
+        
+        &__text {
+            padding: 2.2rem 2.2rem;
+            color: white;
+            border: 2px solid;
+            text-align: center;
+    
+            font-size: 2.5rem;
+            
+            strong {
+                font-weight: 500;
+            }
+    
+        }
+    }
+}
+
+@mixin bar-medium($url, $alfa) {
+    .bar {
+        background-image: linear-gradient(45deg, rgba(0, 0, 0, $alfa), rgba(0, 0, 0, $alfa)), url($url);
+    
+        &__text {
+            padding: 3.5rem 0 3.5rem 0;
+            width: 100%;
+            font-size: 4.5rem;
+            text-align: center;
+    
+        }
+    }
+}
 
 @media(min-width: 768px) {
     .wrapper-smaller {
-        width: 75%;
+        width: 70%;
         max-width: 1200px;
     }
 
@@ -30,6 +70,6 @@
 
 @media(min-width: 1024px) {
     .wrapper-smaller {
-        width: 65%;
+        width: 60%;
     }
 }

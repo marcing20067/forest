@@ -13,8 +13,6 @@
     }
 
     &__box {
-
-
         &-text {
             margin-bottom: 1.2rem;
             color: #000;
@@ -36,8 +34,13 @@
 
                 &-link {
                     font-size: 1.6rem;
-                    color: rgba(000, 000, 000, .8);
+                    color: #000;
                     text-decoration: none;
+                    opacity: .8;
+
+                    &:hover {
+                        opacity: 1;
+                    }
                 }
             }
         }

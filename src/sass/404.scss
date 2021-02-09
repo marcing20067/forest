@@ -1,4 +1,4 @@
-@import 'reset', 'components', 'nav/nav';
+@import 'colors', 'reset', 'components', 'nav/nav';
 
 body {
     display: flex;
@@ -17,7 +17,7 @@ body {
     background-size: cover;
     background-position: center center;
     text-align: center;
-    color: white;
+    color: $white;
     
 }
 
