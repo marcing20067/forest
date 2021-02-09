@@ -1,7 +1,7 @@
-const hamburger = document.querySelector(".hamburger")
-const navList = document.querySelector(".nav__list")
-const navListItems = document.querySelectorAll(".nav__list-item-link")
-const body = document.body
+const hamburger = document.querySelector(".hamburger");
+const navList = document.querySelector(".nav__list");
+const navListItems = document.querySelectorAll(".nav__list-item-link");
+const body = document.body;
 
 const navFunction = () => {
     if (window.innerWidth < 1024) {
@@ -14,5 +14,4 @@ const navFunction = () => {
 navListItems.forEach(item => {
     item.addEventListener("click", navFunction)
 })
-
 hamburger.addEventListener("click", navFunction)

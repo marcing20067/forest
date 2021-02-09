@@ -37,6 +37,7 @@
                     color: #000;
                     text-decoration: none;
                     opacity: .8;
+                    transition: opacity .3s;
 
                     &:hover {
                         opacity: 1;

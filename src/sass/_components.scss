@@ -13,7 +13,7 @@
     text-transform: uppercase;
     font-weight: normal;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
 }
 
 @mixin bar($url, $alfa){
@@ -65,6 +65,7 @@
 
     .title {
         font-size: 3.8rem;
+        margin-bottom: 4rem;
     }
 }
 
