@@ -1,6 +1,5 @@
 const { src, dest, series, parallel, watch } = require('gulp');
-const sass = require('gulp-sass');
-sass.compiler = require('node-sass');
+const sass = require('gulp-dart-sass');
 const cssnano = require('gulp-cssnano');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');

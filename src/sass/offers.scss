@@ -1,7 +1,9 @@
-@import 'reset', 'components', 'nav/nav';
+@use 'bar' with (
+    $url-mobile: "../img/wood-mobile.jpg",
+    $url: "../img/wood.jpg"
+);
 
-
-@import 'footer/footer';
+@import 'reset', 'colors', 'components', 'nav/nav', 'footer/footer';
 
 .h1 {
     padding: 7rem;
@@ -11,10 +13,8 @@
 }
 
 .about-offer {
-    background-image: linear-gradient(45deg, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/leaves-mobile.jpg);
-    background-size: cover;
-    background-position: center center;
-    color: #FFF;
+    @include background-image("../img/leaves-mobile.jpg", .6);
+    color: $white;
 }
 
 .why-we {
@@ -45,10 +45,7 @@
     }
 }
 
-@include bar("../img/wood-mobile.jpg", .6);
-
 .offer {
-
     &__box {
         display: flex;
         align-items: center;
@@ -98,39 +95,14 @@
         }
 
         &-button {
-            position: relative;
             margin-top: 1em;
             padding: 0.5em 3em;
-            z-index: 0;
             color: rgba(0, 0, 0, .6);
             font-size: 1em;
             background-color: #fff;
             border: none;
-            border-radius: 10px;
             box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, .6);
             cursor: pointer;
-            overflow: hidden;
-
-            &::after {
-                content: "";
-                position: absolute;
-                z-index: -1;
-                top: 0;
-                left: 0;
-                width: 110%;
-                height: 100%;
-                border-radius: 10px;
-                transform: scaleX(0);
-                transform-origin: right;
-                background-color: rgba(0, 0, 0, .2);
-                transition: transform .3s;
-
-            }
-
-            &:hover::after {
-                transform: scaleX(1);
-                transform-origin: left;
-            }
         }
     }
 
@@ -159,8 +131,6 @@
     .nav__box {
         width: 100%;
     }
-
-    @include bar-medium("../img/wood.jpg", .6)
 }
 
 @media (min-width: 1024px) {

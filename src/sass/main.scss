@@ -1,5 +1,10 @@
-@import 'colors', 'reset', 'components', './nav/nav';
+@use 'bar' with (
+    $url-mobile: "../img/girl-mobile.jpg",
+    $url: "../img/girl.jpg",
+    $alfa: .6
+);
 
+@import 'colors', 'reset', 'components', './nav/nav';
 
 .header {
     display: flex;
@@ -8,9 +13,7 @@
     width: 100%;
     height: 300px;
     color: white;
-    background-position: center center;
-    background-size: cover;
-    background-image: linear-gradient(45deg, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("../img/jungle-mobile.jpg");
+    @include background-image("../img/jungle-mobile.jpg", .6);
 
     &__title {
         font-size: 3rem;
@@ -41,8 +44,6 @@
         }
     }
 }
-
-@include bar("../img/girl-mobile.jpg", .6);
 
 .offer {
     &__box {
@@ -94,39 +95,14 @@
         }
 
         &-button {
-            position: relative;
-            z-index: 0;
             padding: 1rem 6rem;
             margin-top: 2rem;
             border: none;
             font-size: 2rem;
             background-color: $white;
             color: rgba(0, 0, 0, .6);
-            border-radius: 10px;
             box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, .6);
-            overflow: hidden;
             cursor: pointer;
-
-
-            &::after {
-                content: "";
-                position: absolute;
-                z-index: -1;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                transform: scaleX(0);
-                transform-origin: right;
-                transition: transform .3s;
-                background-color: rgba(0, 0, 0, .2);
-                border-radius: 10px;
-            }
-
-            &:hover::after {
-                transform: scaleX(1);
-                transform-origin: left;
-            }
 
             &--neon {
                 background-color: $green;
@@ -136,11 +112,7 @@
         }
     }
 
-
-
-
     &__btn-offers {
-        position: relative;
         display: block;
         padding: 2.5rem 5rem;
         margin: 4rem auto 0 auto;
@@ -151,31 +123,8 @@
         text-transform: uppercase;
         text-decoration: none;
         border: 2px solid;
-        border-radius: 10px;
         cursor: pointer;
         transition: color .3s;
-        z-index: 0;
-        overflow: hidden;
-
-        &::after {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform .3s;
-            background-color: rgba(0, 0, 0, .2);
-            border-radius: 10px;
-        }
-
-        &:hover::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
     }
 }
 

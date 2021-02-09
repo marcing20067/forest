@@ -2,7 +2,7 @@
 .wrapper-smaller {
     margin: 0 auto;
     width: 80%;
-    max-width: 1600px;
+    max-width: 1400px;
 }
 
 .section-padding {
@@ -16,51 +16,37 @@
     margin-bottom: 2.5rem;
 }
 
-@mixin bar($url, $alfa){
-    .bar {
-        display: flex;
-        background-size: cover;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 400px;
-        background-image: linear-gradient(45deg, rgba(0, 0, 0, $alfa), rgba(0, 0, 0, $alfa)), url($url);
-        background-position: center center;
-        
-        &__text {
-            padding: 2.2rem 2.2rem;
-            color: white;
-            border: 2px solid;
-            text-align: center;
-    
-            font-size: 2.5rem;
-            
-            strong {
-                font-weight: 500;
-            }
-    
-        }
-    }
-}
+.button {
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    overflow: hidden;
 
-@mixin bar-medium($url, $alfa) {
-    .bar {
-        background-image: linear-gradient(45deg, rgba(0, 0, 0, $alfa), rgba(0, 0, 0, $alfa)), url($url);
-    
-        &__text {
-            padding: 3.5rem 0 3.5rem 0;
-            width: 100%;
-            font-size: 4.5rem;
-            text-align: center;
-    
-        }
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .3s;
+        background-color: rgba(0, 0, 0, .2);
+        border-radius: 10px;
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
     }
 }
 
 @media(min-width: 768px) {
     .wrapper-smaller {
         width: 70%;
-        max-width: 1200px;
+        max-width: 950px;
     }
 
     .title {
@@ -73,4 +59,10 @@
     .wrapper-smaller {
         width: 60%;
     }
+}
+
+@mixin background-image($url, $alfa) {
+    background-position: center center;
+    background-size: cover;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, $alfa), rgba(0, 0, 0, $alfa)), url($alfa);
 }
