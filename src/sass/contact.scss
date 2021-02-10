@@ -1,4 +1,4 @@
-@import 'colors', 'reset', 'components', 'nav/nav';
+@import 'colors', 'reset', 'components', 'nav', 'footer';
 
 .map-frame {
     width: 100%;
@@ -106,18 +106,8 @@
 
 
 
-@import 'footer/footer';
-
-@media (min-width: 768px) {
-    @import 'footer/footer-medium';
-}
-
 @media (min-width: 1024px) {
-    @import 'nav/nav-desktop';
-
     .box {
         width: 65%;
     }
-
-    @import 'footer/footer-desktop';
 }

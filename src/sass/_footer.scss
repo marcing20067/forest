@@ -60,3 +60,51 @@
         border-top: 1px solid solid;
     }
 }
+
+@media (min-width: 768px) {
+    .footer {
+        &__heading {
+            margin: 0 auto;
+            margin-bottom: 2rem;
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer {
+        &__wrapper {
+            justify-content: space-between;
+        }
+
+        &__heading {
+            margin: 0;
+            width: fit-content;
+        }
+
+        &__box {
+            &-list {
+                margin: 0;
+            }
+        }
+
+        &__box:nth-of-type(2n) {
+            margin: 0 8rem;
+        }
+
+        &__container {
+            width: fit-content;
+        }
+    }
+}

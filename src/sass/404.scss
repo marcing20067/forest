@@ -1,4 +1,4 @@
-@import 'colors', 'reset', 'components', 'nav/nav';
+@import 'colors', 'reset', 'components', 'nav';
 
 body {
     display: flex;
@@ -18,19 +18,12 @@ body {
     color: $white;   
 }
 
-@import 'footer/footer';
+@import 'footer';
 
 @media (min-width: 768px) {
     .funny-info {
         min-height: 768px;
         background-image: linear-gradient(45deg, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/redcat.jpg);
     }
-
-    @import 'footer/footer-medium';
 }
 
-@media (min-width: 1024px) {
-    @import 'nav/nav-desktop';
-
-    @import 'footer/footer-desktop';
-}

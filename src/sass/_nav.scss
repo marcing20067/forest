@@ -62,3 +62,44 @@
     background-color: #fff;
     border-bottom: 1px solid gray;
 }
+
+@media (min-width: 1024px) {
+    .nav {
+        height: auto;
+        background-color: #fff;
+        border-bottom: 1px solid gray;
+
+        &__box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+        }
+
+        &__logo {
+            display: block;
+        }
+
+        &__logo-link {
+            text-decoration: none;
+            color: $black;
+            font-size: 4.5rem;
+
+            img {
+                height: 4.5rem;
+            }
+        }
+
+        &__list {
+            position: static;
+            width: auto;
+            height: auto;
+            flex-direction: row;
+            transition: none;
+        }
+    }
+
+    .container {
+        display: none;
+    }
+}

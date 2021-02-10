@@ -1,9 +1,8 @@
-@use 'bar' with (
-    $url-mobile: "../img/conifer-mobile.jpg",
+@use 'bar'with ($url-mobile: "../img/conifer-mobile.jpg",
     $url: "../img/conifer.jpg"
 );
 
-@import 'reset', 'colors', 'components', 'nav/nav', 'footer/footer';
+@import 'reset', 'colors', 'components', 'nav', 'footer';
 
 .h1 {
     padding: 7rem;
@@ -111,8 +110,6 @@
 }
 
 @media (min-width: 768px) {
-    @import 'footer/footer-medium';
-
     .why-we {
         &__container {
             flex-direction: row;
@@ -134,8 +131,6 @@
 }
 
 @media (min-width: 1024px) {
-    @import 'nav/nav-desktop';
-
     .offer {
         &__box {
             display: flex;
@@ -153,7 +148,6 @@
         width: 80%;
     }
 
-    @import 'footer/footer-desktop';
 }
 
 @media (min-width: 1380px) {

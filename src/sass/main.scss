@@ -4,7 +4,7 @@
     $alfa: .6
 );
 
-@import 'colors', 'reset', 'components', './nav/nav';
+@import 'colors', 'reset', 'components', 'nav', 'footer';
 
 .header {
     display: flex;
@@ -128,5 +128,5 @@
     }
 }
 
-@import 'footer/footer', 'medium', 'large';
+@import 'medium', 'large';
 
