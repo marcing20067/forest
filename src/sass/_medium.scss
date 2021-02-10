@@ -1,0 +1,32 @@
+@media (min-width: 768px) {
+    .header {
+        background-image: linear-gradient(45deg, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("../img/jungle.jpg");
+        height: 400px;
+
+        &__title {
+            font-size: 3.8rem;
+        }
+
+        span {
+            font-size: 1.6rem;
+        }
+    }
+
+    .about-us {
+        &__box-heading {
+            font-size: 3rem;
+        }
+    }
+
+    @import 'footer/footer-medium';
+}
+
+@media(min-width: 900px) {
+    .offer {
+        &__box {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+}

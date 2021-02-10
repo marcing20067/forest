@@ -1,6 +1,6 @@
 @use 'bar' with (
-    $url-mobile: "../img/wood-mobile.jpg",
-    $url: "../img/wood.jpg"
+    $url-mobile: "../img/conifer-mobile.jpg",
+    $url: "../img/conifer.jpg"
 );
 
 @import 'reset', 'colors', 'components', 'nav/nav', 'footer/footer';

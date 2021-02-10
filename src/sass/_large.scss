@@ -1,0 +1,30 @@
+@media (min-width: 1024px) {
+    @import './nav/nav-desktop';
+
+    .about-us {
+        &__box {
+            margin-top: 0;
+        }
+
+        &__img {
+            margin-right: 8rem;
+            width: 45%;
+        }
+
+        &__container {
+            display: flex;
+        }
+    }
+
+    @import 'footer/footer-desktop';
+}
+
+@media(min-width: 1300px) {
+    .offer {
+        &__card {
+            &:nth-of-type(2) {
+                margin: 3rem;
+            }
+        }
+    }
+}
