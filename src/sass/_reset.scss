@@ -1,3 +1,8 @@
+html,
+body {
+    height: 100%;
+}
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -7,6 +12,8 @@ html {
 body {
     font-size: 2rem;
     font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 *,
@@ -21,4 +28,8 @@ body {
     .block-scroll {
         overflow: hidden;
     }
+}
+
+.content {
+    flex: 1 0 auto;
 }

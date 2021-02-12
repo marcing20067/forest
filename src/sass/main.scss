@@ -1,8 +1,6 @@
-@use 'bar' with (
-    $url-mobile: "../img/girl-mobile.jpg",
+@use 'bar'with ($url-mobile: "../img/girl-mobile.jpg",
     $url: "../img/girl.jpg",
-    $alfa: .6
-);
+    $alfa: .6);
 
 @import 'colors', 'reset', 'components', 'nav', 'footer';
 
@@ -101,7 +99,7 @@
             font-size: 2rem;
             background-color: $white;
             color: rgba(0, 0, 0, .6);
-            box-shadow: 1px 4px 4px 0 rgba(0, 0, 0, .6);
+            box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, .6);
             cursor: pointer;
 
             &--neon {
@@ -112,11 +110,12 @@
         }
     }
 
-    &__btn-offers {
+    &__btn-offers {        
         display: block;
-        padding: 2.5rem 5rem;
+        padding: 2rem 6rem;
         margin: 4rem auto 0 auto;
         width: fit-content;
+        font-size: 2rem;
         background: $darker-green;
         color: #fff;
         font-weight: bold;
@@ -129,4 +128,3 @@
 }
 
 @import 'medium', 'large';
-

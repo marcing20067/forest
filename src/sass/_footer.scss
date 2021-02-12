@@ -1,5 +1,6 @@
 .footer {
     background-color: #f4f4f4;
+    flex-shrink: 0;
 
     &__heading {
         display: block;
@@ -9,6 +10,7 @@
 
         img {
             height: 4.5rem;
+            vertical-align: -6px;
         }
     }
 
