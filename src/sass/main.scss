@@ -28,7 +28,6 @@
 .about-us {
     &__img {
         width: 100%;
-        height: fit-content;
     }
 
     &__box {
@@ -122,6 +121,7 @@
         width: fit-content;
         background-color: $darker-green;
         margin: 0 auto;
+        margin-top: 4rem;
     }
 }
 
