@@ -2,7 +2,20 @@
     background-color: #f4f4f4;
     flex-shrink: 0;
 
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    &__container {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
     &__heading {
+        grid-column: 2/3;
+        grid-row: 1/2;
         display: block;
         margin-bottom: 1.5rem;
         font-size: 4.5rem;
@@ -63,7 +76,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 650px) {
     .footer {
         &__heading {
             margin: 0 auto;

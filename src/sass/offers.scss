@@ -8,7 +8,6 @@
     padding: 7rem;
     font-weight: bold;
     margin: 0;
-
 }
 
 .about-offer {
@@ -131,6 +130,7 @@
 }
 
 @media (min-width: 1024px) {
+
     .offer {
         &__box {
             display: flex;
