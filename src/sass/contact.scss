@@ -47,14 +47,18 @@
                 outline: none;
 
                 &~.form__box-label {
-                    color: $green;
+                    color: $darker-green;
                 }
 
                 &~.form__box-bar::after {
                     opacity: 1;
                 }
             }
+
+
         }
+
+
 
         &-label {
             position: absolute;
@@ -84,6 +88,12 @@
                 background-color: $darker-green;
                 opacity: 0;
                 transition: opacity .3s;
+            }
+        }
+
+        &-email {
+            &--valid~.form__box-label {
+                transform: scale(0.75) translateY(-150%);
             }
         }
 
