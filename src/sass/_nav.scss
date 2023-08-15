@@ -1,4 +1,4 @@
-@use 'colors' as colors;
+@use "colors" as colors;
 
 .nav {
     position: fixed;
@@ -27,7 +27,7 @@
         width: 100%;
         background-color: white;
         list-style: none;
-        transition: .7s transform;
+        transition: 0.7s transform;
 
         @media (max-width: 1024px) {
             &--active {
@@ -43,7 +43,9 @@
             display: block;
             padding: 3.5rem 0;
             width: 100%;
-            transition: .2s color, .2s background-color;
+            transition:
+                0.2s color,
+                0.2s background-color;
 
             &:hover {
                 color: white;
@@ -118,5 +120,11 @@
         display: block;
         height: 9.3rem;
         width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .block-scroll {
+        overflow: hidden;
     }
 }
