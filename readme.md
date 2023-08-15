@@ -1,14 +1,34 @@
 # Forest
 
-## Technologies
-HTML, SCSS, SASS, JS, GULP
+The most beautiful park in your neighbourhood!
+
+![Page Screenshot](./github/hero.png)
+
+## Demo
+
+[Check out our page in action!](https://marcing20067.github.io/it-mentor/)
+
+## Tech Stack
+
+HTML, SCSS, JavaScript, Gulp
+
+## Installation
+
+```bash
+  npm install -g gulp-cli
+  npm install
+```
+
+## Usage
+
+```bash
+gulp
+```
 
 ## Copyright
-Code: Me 
+
+Code: Me
 
 Design: Me & Course ["Kurs Tworzenia Stron WWW cz. 4" by MMC School](https://mmcschool.teachable.com/p/kurs-tworzenia-stron-www-cz-4)
 
-Icons: From [tabler icons](https://tabler-icons.io/)
-
-## Live
-[Live](https://marcing20067.github.io/forest/)
+Icons: [Tabler Icons](https://tabler-icons.io/)

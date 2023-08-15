@@ -86,11 +86,12 @@
         &__logo-link {
             text-decoration: none;
             color: $black;
-            font-size: 4.5rem;
+            font-size: 3.5rem;
 
             img {
-                height: 4.5rem;
-                vertical-align: -6px;
+                height: 3.5rem;
+                vertical-align: -5px;
+                margin-right: 0.3rem;
             }
         }
 
