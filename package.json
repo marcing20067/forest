@@ -8,6 +8,7 @@
   "license": "ISC",
   "scripts": {
     "build": "gulp build",
+    "deploy": "gulp deploy",
     "start": "gulp"
   },
   "devDependencies": {
