@@ -1,4 +1,8 @@
-@import 'colors', 'reset', 'components', 'nav';
+@use "colors" as colors;
+@use "components" as components;
+@use "reset";
+@use "nav";
+@use "footer";
 
 body {
     display: flex;
@@ -13,17 +17,14 @@ body {
     align-items: center;
     flex-grow: 1;
     min-height: 500px;
-    @include background-image("../img/redcat-mobile.jpg", .6);
+    @include components.bgc-image("../img/redcat-mobile.jpg", 0.6);
     text-align: center;
-    color: $white;   
+    color: colors.$white;
 }
-
-@import 'footer';
 
 @media (min-width: 768px) {
     .funny-info {
         min-height: 768px;
-        background-image: linear-gradient(45deg, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/redcat.jpg);
+        background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/redcat.jpg);
     }
 }
-

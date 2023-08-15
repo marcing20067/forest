@@ -1,8 +1,13 @@
-@use 'bar'with ($url-mobile: "../img/conifer-mobile.jpg",
+@use "bar" with (
+    $url-mobile: "../img/conifer-mobile.jpg",
     $url: "../img/conifer.jpg"
 );
 
-@import 'reset', 'colors', 'components', 'nav', 'footer';
+@use "colors" as colors;
+@use "components" as components;
+@use "reset";
+@use "nav";
+@use "footer";
 
 .h1 {
     padding: 7rem;
@@ -11,8 +16,8 @@
 }
 
 .about-offer {
-    @include background-image("../img/leaves-mobile.jpg", .8);
-    color: $white;
+    @include components.bgc-image("../img/leaves-mobile.jpg", 0.8);
+    color: colors.$white;
 
     &__text {
         line-height: 135%;
@@ -31,7 +36,6 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: 2rem;
-
 
         &:last-of-type {
             margin-bottom: 0;
@@ -67,7 +71,7 @@
         align-items: center;
         padding: 1.5em 2em;
         border-radius: 5px;
-        box-shadow: 0 0 8px 0 rgba(0, 0, 0, .2);
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 
         &:last-of-type {
             margin-bottom: 0;
@@ -100,17 +104,14 @@
         &-button {
             margin-top: 1em;
             padding: 0.5em 3em;
-            color: rgba(0, 0, 0, .6);
+            color: rgba(0, 0, 0, 0.6);
             font-size: 1em;
             background-color: #fff;
             border: none;
-            box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, .6);
+            box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.6);
             cursor: pointer;
         }
     }
-
-
-
 }
 
 @media (min-width: 768px) {
@@ -126,7 +127,7 @@
     }
 
     .about-offer {
-        background-image: linear-gradient(45deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(../img/leaves.jpg);
+        background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/leaves.jpg);
     }
 
     .nav__box {
@@ -135,7 +136,6 @@
 }
 
 @media (min-width: 1024px) {
-
     .offer {
         &__box {
             display: flex;
@@ -152,7 +152,6 @@
     .nav__box {
         width: 80%;
     }
-
 }
 
 @media (min-width: 1380px) {

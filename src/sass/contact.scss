@@ -1,4 +1,8 @@
-@import "colors", "reset", "components", "nav", "footer";
+@use "colors" as colors;
+@use "components" as components;
+@use "reset";
+@use "nav";
+@use "footer";
 
 .map-frame {
     width: 100%;
@@ -44,12 +48,11 @@
                 transform: scale(0.75) translateY(-150%);
             }
 
-
             &:focus {
                 outline: none;
 
                 & ~ .form__box-label {
-                    color: $darker-green;
+                    color: colors.$darker-green;
                 }
 
                 & ~ .form__box-bar::after {
@@ -85,7 +88,7 @@
                 position: absolute;
                 height: 100%;
                 width: 100%;
-                background-color: $darker-green;
+                background-color: colors.$darker-green;
                 opacity: 0;
                 transition: opacity 0.3s;
             }
@@ -107,7 +110,7 @@
         padding: 1rem 6rem;
         border: none;
         font-size: 2rem;
-        background-color: $green;
+        background-color: colors.$green;
         box-shadow: 1px 4px 4px 0 rgba(44, 220, 116, 0.6);
         color: #000;
         cursor: pointer;

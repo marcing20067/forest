@@ -43,6 +43,10 @@
     }
 }
 
+.content {
+    flex: 1 0 auto;
+}
+
 @media(min-width: 768px) {
     .wrapper-smaller {
         width: 70%;
@@ -61,7 +65,7 @@
     }
 }
 
-@mixin background-image($url, $alfa) {
+@mixin bgc-image($url, $alfa) {
     background-position: center center;
     background-size: cover;
     background-image: linear-gradient(45deg, rgba(0, 0, 0, $alfa), rgba(0, 0, 0, $alfa)), url($url);

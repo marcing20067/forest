@@ -1,3 +1,5 @@
+@use 'colors' as colors;
+
 .nav {
     position: fixed;
     z-index: 100;
@@ -85,7 +87,7 @@
 
         &__logo-link {
             text-decoration: none;
-            color: $black;
+            color: colors.$black;
             font-size: 3.5rem;
 
             img {

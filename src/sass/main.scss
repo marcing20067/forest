@@ -1,8 +1,14 @@
-@use 'bar'with ($url-mobile: "../img/girl-mobile.jpg",
+@use "bar" with (
+    $url-mobile: "../img/girl-mobile.jpg",
     $url: "../img/girl.jpg",
-    $alfa: .6);
+    $alfa: 0.6
+);
 
-@import 'colors', 'reset', 'components', 'nav', 'footer';
+@use "components" as components;
+@use "colors" as colors;
+@use "nav";
+@use "footer";
+@use "reset";
 
 .header {
     display: flex;
@@ -11,7 +17,7 @@
     width: 100%;
     height: 300px;
     color: white;
-    @include background-image("../img/jungle-mobile.jpg", .6);
+    @include components.bgc-image("../img/jungle-mobile.jpg", 0.6);
 
     &__title {
         font-size: 3rem;
@@ -23,7 +29,6 @@
         font-weight: normal;
         margin-bottom: 0.5rem;
     }
-
 }
 
 .about-us {
@@ -62,7 +67,7 @@
         align-items: center;
         padding: 2rem 3rem;
         border-radius: 5px;
-        box-shadow: 0 0 8px 0 rgba(0, 0, 0, .2);
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 
         &:nth-of-type(2) {
             margin: 3rem 0;
@@ -80,7 +85,6 @@
             &-item--has::before {
                 content: url(../img/icons/tabler-icon-check.svg);
                 margin-right: 0.5rem;
-
             }
 
             &-item--no-has {
@@ -98,14 +102,14 @@
             margin-top: 2rem;
             border: none;
             font-size: 2rem;
-            background-color: $white;
-            color: rgba(0, 0, 0, .6);
-            box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, .6);
+            background-color: colors.$white;
+            color: rgba(0, 0, 0, 0.6);
+            box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.6);
             cursor: pointer;
 
             &--neon {
-                background-color: $green;
-                box-shadow: 1px 4px 4px 0 rgba(44, 220, 116, .6);
+                background-color: colors.$green;
+                box-shadow: 1px 4px 4px 0 rgba(44, 220, 116, 0.6);
                 color: #000;
             }
         }
@@ -115,15 +119,72 @@
         padding: 1rem 6rem;
         border: none;
         font-size: 2rem;
-        color: $white;
+        color: colors.$white;
         cursor: pointer;
         text-decoration: none;
         display: block;
         width: fit-content;
-        background-color: $darker-green;
+        background-color: colors.$darker-green;
         margin: 0 auto;
         margin-top: 4rem;
     }
 }
 
-@import 'medium', 'large';
+@media (min-width: 768px) {
+    .header {
+        background-image: linear-gradient(45deg, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("../img/jungle.jpg");
+        height: 400px;
+
+        &__title {
+            font-size: 3.8rem;
+        }
+
+        span {
+            margin-bottom: 0.8rem;
+        }
+    }
+
+    .about-us {
+        &__box-heading {
+            font-size: 3rem;
+        }
+    }
+}
+
+@media(min-width: 900px) {
+    .offer {
+        &__box {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-us {
+        &__box {
+            margin-top: 0;
+        }
+
+        &__img {
+            margin-right: 8rem;
+            width: 45%;
+            height: fit-content;
+        }
+
+        &__container {
+            display: flex;
+        }
+    }
+}
+
+@media(min-width: 1300px) {
+    .offer {
+        &__card {
+            &:nth-of-type(2) {
+                margin: 3rem;
+            }
+        }
+    }
+}
