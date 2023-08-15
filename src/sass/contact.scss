@@ -1,4 +1,4 @@
-@import 'colors', 'reset', 'components', 'nav', 'footer';
+@import "colors", "reset", "components", "nav", "footer";
 
 .map-frame {
     width: 100%;
@@ -31,45 +31,45 @@
         }
 
         &-input {
-            padding: 2rem 3rem 2rem;
+            padding: 0 3rem 1rem 3rem;
             width: 100%;
             background-color: transparent;
-            color: rgba(0, 0, 0, .87);
+            color: rgba(0, 0, 0, 0.87);
             font-size: 1.6rem;
             border: none;
+            border-top: 3.5rem solid transparent;
 
-            &:valid~.form__box-label,
-            &:focus~.form__box-label {
+            &:valid ~ .form__box-label,
+            &:focus ~ .form__box-label {
                 transform: scale(0.75) translateY(-150%);
             }
+
 
             &:focus {
                 outline: none;
 
-                &~.form__box-label {
+                & ~ .form__box-label {
                     color: $darker-green;
                 }
 
-                &~.form__box-bar::after {
+                & ~ .form__box-bar::after {
                     opacity: 1;
                 }
             }
-
-
         }
-
-
 
         &-label {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             left: 3rem;
-            color: rgba(000, 000, 000, .6);
+            color: rgba(000, 000, 000, 0.6);
             font-size: 1.6rem;
             pointer-events: none;
             transform-origin: left;
-            transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            transition:
+                transform 150ms cubic-bezier(0.4, 0, 0.2, 1),
+                color 150ms cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         &-bar {
@@ -78,21 +78,21 @@
             bottom: 0;
             height: 1px;
             width: 100%;
-            background-color: rgba(000, 000, 000, .6);
+            background-color: rgba(000, 000, 000, 0.6);
 
             &::after {
-                content: '';
+                content: "";
                 position: absolute;
                 height: 100%;
                 width: 100%;
                 background-color: $darker-green;
                 opacity: 0;
-                transition: opacity .3s;
+                transition: opacity 0.3s;
             }
         }
 
         &-email {
-            &--valid~.form__box-label {
+            &--valid ~ .form__box-label {
                 transform: scale(0.75) translateY(-150%);
             }
         }
@@ -101,7 +101,6 @@
             width: 100%;
             resize: vertical;
         }
-
     }
 
     &__btn-submit {
@@ -109,7 +108,7 @@
         border: none;
         font-size: 2rem;
         background-color: $green;
-        box-shadow: 1px 4px 4px 0 rgba(44, 220, 116, .6);
+        box-shadow: 1px 4px 4px 0 rgba(44, 220, 116, 0.6);
         color: #000;
         cursor: pointer;
         display: block;

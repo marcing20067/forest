@@ -13,6 +13,10 @@
 .about-offer {
     @include background-image("../img/leaves-mobile.jpg", .8);
     color: $white;
+
+    &__text {
+        line-height: 135%;
+    }
 }
 
 .why-we {
@@ -38,7 +42,8 @@
         }
 
         &-img {
-            width: 8rem;
+            width: 7rem;
+            margin-bottom: 0.5rem;
         }
     }
 }

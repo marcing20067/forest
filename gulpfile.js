@@ -88,6 +88,6 @@ function ghPages(done) {
 
 const mainFunctions = parallel(sassCompiler, javaScript, moveImagesToDist);
 exports.cleanStuff = cleanStuff;
-exports.default = series(mainFunctions, startBrowserSync, watchForChanges);
+exports.default = series(mainFunctions, handleKits, startBrowserSync, watchForChanges);
 exports.build = parallel(handleKits, mainFunctions);
 exports.deploy = series(handleKits, mainFunctions, ghPages);
