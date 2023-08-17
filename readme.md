@@ -6,7 +6,7 @@ The most beautiful park in your neighbourhood!
 
 ## Demo
 
-[Check out our page in action!](https://marcing20067.github.io/it-mentor/)
+[Check out our page in action!](https://marcing20067.github.io/forest)
 
 ## Tech Stack
 
