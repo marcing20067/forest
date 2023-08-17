@@ -6,7 +6,6 @@ const nav = document.querySelector('nav');
 const navFocusableChilds = [hamburger, ...navListItems];
 const navFirstFocusableChild = navFocusableChilds[0];
 const navLastFocusableChild = navFocusableChilds[navFocusableChilds.length - 1];
-
 const myLocation = window.location.href.split('/').reverse()[0];
 let isTrappedTabulation = false;
 

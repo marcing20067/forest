@@ -2,20 +2,7 @@
     background-color: #f4f4f4;
     flex-shrink: 0;
 
-    &__wrapper {
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        grid-template-rows: auto auto;
-    }
-
-    &__container {
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-
     &__heading {
-        grid-column: 2/3;
-        grid-row: 1/2;
         display: block;
         margin-bottom: 1.5rem;
         font-size: 3.5rem;
@@ -84,12 +71,6 @@
             margin-bottom: 2rem;
         }
 
-        &__wrapper {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-
         &__container {
             display: flex;
             justify-content: space-between;
@@ -101,6 +82,7 @@
 @media (min-width: 1200px) {
     .footer {
         &__wrapper {
+            display: flex;
             justify-content: space-between;
         }
 
