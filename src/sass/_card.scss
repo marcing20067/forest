@@ -1,0 +1,42 @@
+@use "colors" as colors;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 3rem;
+    border-radius: 5px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+
+    &:nth-of-type(2) {
+        margin: 3rem 0;
+    }
+
+    &__price {
+        margin: 1rem 0;
+        font-size: 5rem;
+        font-weight: bold;
+    }
+
+    &__list {
+        list-style-type: none;
+
+        &-item--has::before {
+            content: url(../img/icons/tabler-icon-check.svg);
+            margin-right: 0.5rem;
+        }
+
+        &-item--no-has {
+            opacity: 0.6;
+
+            &::before {
+                content: url(../img/icons/tabler-icon-minus.svg);
+                margin-right: 0.5rem;
+            }
+        }
+    }
+
+    &__button {
+        margin-top: 2rem;
+    }
+}

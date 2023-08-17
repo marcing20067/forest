@@ -11,10 +11,7 @@ body {
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
     flex-grow: 1;
     min-height: 500px;
     @include components.bgc-image("../img/redcat-mobile.jpg", 0.6);

@@ -8,6 +8,7 @@
 @use "reset";
 @use "nav";
 @use "footer";
+@use "card";
 
 .h1 {
     padding: 7rem;
@@ -25,16 +26,7 @@
 }
 
 .why-we {
-    &__container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
     &__box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         margin-bottom: 2rem;
 
         &:last-of-type {
@@ -53,64 +45,18 @@
 }
 
 .offer {
-    &__box {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-
     &__text {
         margin-bottom: 4rem;
         text-align: center;
     }
+}
 
-    &__card {
-        display: flex;
-        margin-bottom: 7rem;
-        flex-direction: column;
-        align-items: center;
-        padding: 1.5em 2em;
-        border-radius: 5px;
-        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+.card {
+    margin-bottom: 7rem;
+    padding: 3rem 4rem;
 
-        &:last-of-type {
-            margin-bottom: 0;
-        }
-
-        &-price {
-            font-weight: bold;
-            margin: 1rem 0;
-            font-size: 2.5em;
-        }
-
-        &-list {
-            list-style-type: none;
-
-            &-item--has::before {
-                content: url(../img/icons/tabler-icon-check.svg);
-                margin-right: 0.5rem;
-            }
-
-            &-item--no-has {
-                opacity: 0.6;
-
-                &::before {
-                    content: url(../img/icons/tabler-icon-minus.svg);
-                    margin-right: 0.5rem;
-                }
-            }
-        }
-
-        &-button {
-            margin-top: 1em;
-            padding: 0.5em 3em;
-            color: rgba(0, 0, 0, 0.6);
-            font-size: 1em;
-            background-color: #fff;
-            border: none;
-            box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.6);
-            cursor: pointer;
-        }
+    &:last-of-type {
+        margin-bottom: 0;
     }
 }
 
@@ -156,15 +102,15 @@
 
 @media (min-width: 1380px) {
     .offer {
-        &__card {
-            margin: 0;
-        }
-
         &__box {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(3, 1fr);
             gap: 4rem;
         }
+    }
+    
+    .card {
+        margin: 0;
     }
 }
