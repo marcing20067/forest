@@ -2,7 +2,7 @@
 
 The most beautiful park in your neighbourhood!
 
-![Page Screenshot](./github/hero.png)
+[<img src="./github/hero.png" alt="Page Screenshot">](https://marcing20067.github.io/forest)
 
 ## Demo
 
